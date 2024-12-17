@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!--<meta name="viewport" content="width=device-width, initial-scale=1.0">>-->
+     <!--移动端meta viewport-->
+     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+     <!-- 移动端meta -->
+     <meta name="apple-mobile-web-app-capable" content="yes">
+     <meta name="apple-mobile-web-app-status-bar-style" content="black">
+     <meta name="format-detection" content="telephone=no">
+     <title>京东商城 22001010302真国越</title>
+     <link rel="stylesheet" href="./css/zhenguoyue.css">
+     <link rel="stylesheet" href="./css/swiper-bundle.min.css">
+     <script src="./fonts/font_4713318_snbvcfm8ma/iconfont.js"></script>
+</head>
+<body>
+    <header class="zhen_dd">
+      <div class="h183">购物车 </div>
+      <div class="h184">(3)</div>
+      <div class="h185"></div>
+      <div class="h186">
+        <svg class="icon" aria-hidden="true">
+          <use xlink:href="#icon-xianshi"></use>
+        </svg>
+      </div>
+      <div class="h187">博川路八号大连东软信息学院博川校...></div>
+      <div class="h188">管理</div>
+      <div class="h189">...</div>
+      <div class="h190">
+        <p>
+            <span style="color: red;">全部</span>
+            <span style="color: black;">凑单</span>
+            <span style="color: grey;">降价</span>
+            <span style="color: black;">筛选</span>
+        </p>
+      </div>
+      <div class="h191">
+          <svg class="icon" aria-hidden="true">
+            <use xlink:href="#icon-shaixuan"></use>
+          </svg>
+      </div>
+      <div class="h192">
+        <div class="h195">V</div>
+        <div class="h196">自营</div>
+        <div class="h197">京东大药房></div>
+        <div class="h198">运费以结算时为准</div>
+        <div class="h199">2件9.5折></div>
+        <div class="h200">2折9.5折></div>
+        <div class="h201">V</div>
+       </div>
+
+
+       <ul class="zhen_ff">
+        <!-- <li>
+        <div class="h202"><img src="./images/57.jpg"></div>
+        <div class="h203">芙林 糠酸莫米松乳膏 10g:10mg*20g/</div>
+        <div class="h204">【皮肤止痒】糠酸莫米松乳膏...V</div>
+        <div class="h205">换促销V</div>
+        <div class="h206">惊喜神卷</div>
+        <div class="h207">满6减5</div>
+        <div class="h208">2件9.5折</div>
+        <div class="h209">7天价保</div>
+        <div class="h210">￥21.22</div>
+        <div class="h211">PLUS到手价</div>
+        <div class="h212">￥27.6</div>
+        <div class="h213">满1件可换购9.9元商品</div>
+        <div class="h214">更多></div>
+        <div class="h215">-</div>
+        <div class="h216">1</div>
+        <div class="h217">+</div>
+        <div class="h218">去换购></div>  
+        <div class="h219">V</div>
+      </li>-->
+      </ul> 
+      <div class="h220">
+        <img src="./images/58.avif">
+      </div>
+    <div class="h221">999皮炎平 糠酸莫米松凝胶乳膏</div>
+    <div class="h222">糠酸莫米松凝胶 10g V</div>
+    <div class="h223">2件9.5折</div>
+    <div class="h224">7天价保</div>
+    <div class="h225">￥15.5</div>
+    <div class="h226">到手价</div>
+    <div class="h227">￥16.5</div>
+    <div class="h228">满1件可换购9.9元商品</div>
+    <div class="h229">-</div>
+    <div class="h230">1</div>
+    <div class="h231">+</div>
+    <div class="h232">去换购></div>
+  <script>
+    const url="http://rap2api.taobao.org/app/mock/321641/zhen5";
+    //dom
+    const ul = document.querySelector('.zhen_ff');
+  //使用fetch获取数据,解析json,加入到zhen_ff中
+  fetch(url)
+  .then(response => response.json())
+ .then(data => {
+   data.forEach(item => {
+     const li = document.createElement('li');
+     li.innerHTML = `
+       <div class="h202"><img src="${item.image}"></div>
+       <div class="h203">${item.details[0].h203}</div>
+       <div class="h204">${item.details[0].h204}</div>
+       <div class="h205">${item.details[0].h205}</div>
+       <div class="h206">${item.details[0].h206}</div>
+       <div class="h207">${item.details[0].h207}</div>
+       <div class="h208">${item.details[0].h208}</div>
+       <div class="h209">${item.details[0].h209}</div>
+       <div class="h210">${item.details[0].h210}</div>
+       <div class="h211">${item.details[0].h211}</div>
+       <div class="h212">${item.details[0].h212}</div>
+       <div class="h213">${item.details[0].h213}</div>
+       <div class="h214">${item.details[0].h214}</div>
+       <div class="h215">${item.details[0].h215}</div>
+       <div class="h216">${item.details[0].h216}</div>
+       <div class="h217">${item.details[0].h217}</div>
+       <div class="h218">${item.details[0].h218}</div>
+       <div class="h219">${item.details[0].h219}</div>
+     `;
+     ul.appendChild(li);    
+   });
+ })
+
+//   [
+//   {
+//       "image": "./images/57.jpg",
+//       "details": [
+//       { "h203": "芙林 糠酸莫米松乳膏 10g:10mg*20g/" },
+//       { "h204": "【皮肤止痒】糠酸莫米松乳膏...V" },
+//       { "h205": "换促销V" },
+//       { "h206": "惊喜神卷" },
+//       { "h207": "满6减5" },
+//       { "h208": "2件9.5折" },
+//       { "h209": "7天价保" },
+//       { "h210": "￥21.22" },
+//       { "h211": "PLUS到手价" },
+//       { "h212": "￥27.6" },
+//       { "h213": "满1件可换购9.9元商品" },
+//       { "h214": "更多>" },
+//       { "h215": "-" },
+//       { "h216": "1" },
+//       { "h217": "+" },
+//       { "h218": "去换购>" },
+//       { "h219": "V" }
+//     ]
+//   }]
+</script>
+
+      <div class="h193">
+        <div class="circle"></div>
+        <div class="h234">藏纳天下收藏品小店></div>
+        <div class="h235">2件9.5折></div>
+        <div class="h236">满2件总价9.5折,满3件总价9.4折,满4件 去凑单 ></div>
+        <div class="h237">总价9.3折</div>
+        <div class="h238"></div>
+        <div class="h239">
+            <img src="./images/59.avif">
+        </div>
+        <div class="h240">蛇年生肖纪念币保护盒三江源京剧艺术</div>
+        <div class="h241">通用款100个30mm小圆盒+盒+垫圈V</div>
+        <div class="h242">2件9.5折</div>
+        <div class="h243">￥15.82</div> 
+        <div class="h244">-</div>
+        <div class="h245">1</div>
+        <div class="h246">+</div> 
+        </div>  
+        <div class="h194">
+        <div class="h247"></div>
+        <div class="h248">全选</div>
+        <div class="h249">已选2件,合计:</div>
+        <div class="h250">￥36.72</div>
+        <div class="h251">优惠减:￥7.38</div>
+        <div class="h252">优惠明细</div>
+        <div class="h253">去结算</div>
+      </div>
+      <script>
+        const circle = document.querySelector('.circle');
+        circle.addEventListener('click', function () {
+          this.classList.toggle('checked');
+        });
+      </script>
+    </header>
+    <footer class="zhen_footer">
+        <nav class="bnav">
+            <ul>
+                <li>
+                    <a href="./index.html">
+                        <svg class="icon" aria-hidden="true">
+                            <use xlink:href="#icon-shouye1"></use>
+                          </svg>
+                          <div>首页</div>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <svg class="icon" aria-hidden="true">
+                            <use xlink:href="#icon-clouddrive1-copy"></use>
+                          </svg>
+                          <p>逛</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <svg class="icon" aria-hidden="true">
+                            <use xlink:href="#icon-shoucang"></use>
+                          </svg>
+                          <p>新品</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="./购物车.html">
+                        <svg class="icon" aria-hidden="true">
+                            <use xlink:href="#icon-gouwuche1"></use>
+                          </svg>
+                          <p>购物车</p>
+                          <span class="num">3</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="./我的.html">
+                        <svg class="icon" aria-hidden="true">
+                            <use xlink:href="#icon-icon_wode-copy"></use>
+                          </svg>
+                          <p>我的</p>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </footer>
+</body>
+</html>
